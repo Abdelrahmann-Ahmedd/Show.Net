@@ -1,0 +1,27 @@
+.card-body {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    padding: 20px 10px; 
+    margin: auto;
+    transition: 0.4s all;
+    background-color: rgba(0, 0, 0, 0.8);
+} 
+
+
+.card:hover .card-body {
+    opacity: 100%;   
+}
+
+.card i {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+    .card {
+        margin: auto;
+    }
+}
+

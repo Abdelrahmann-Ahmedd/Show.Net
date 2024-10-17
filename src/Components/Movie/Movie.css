@@ -1,0 +1,22 @@
+.movie {
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    margin-left: auto;
+    margin-top: -10px;
+}
+
+
+@media only screen and (max-width:856px) {
+    .movie {
+        padding-top: 70px;
+    }
+    
+}
+
+@media only screen and (max-width:600px) {
+    .movie {
+        width: 100%;
+        margin-left: auto;
+        text-align: center;
+    }
+}

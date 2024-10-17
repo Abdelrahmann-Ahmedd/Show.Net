@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Movie from './Components/Movie/Movie';
+import Series from './Components/Series/Series';
+import Booked from './Components/Booked/Booked';
+import Error from './Components/Error/Error';
+import Layout from './Components/Layout/Layout';
+
+
+const myRouter = createBrowserRouter([
+
+  {path:"/", element:<Layout />, children:[
+    {path:"", element:<Movie />},
+    {path:"movie", element:<Movie />},
+    {path:"series", element:<Series />},
+    {path:"booked", element:<Booked />},
+    {path:"*", element:<Error />},
+  ] }
+])
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={myRouter} />
     </div>
   );
 }

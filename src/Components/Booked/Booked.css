@@ -1,0 +1,20 @@
+.not {
+    height: 50vh;
+    padding: 50px;
+}
+
+
+@media only screen and (max-width:856px) {
+    .booked {
+        padding-top: 70px;
+    }
+    
+}
+
+@media only screen and (max-width:600px) {
+    .booked {
+        width: 100%;
+        margin-left: auto;
+        text-align: center;
+    }
+}
